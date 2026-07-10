@@ -1,0 +1,26 @@
+# Aceera Gen Bot License
+
+Copyright (c) 2026 Bryleigh
+
+Permission is hereby granted to any person obtaining a copy of this software
+to use, modify, and host the software for personal or community use.
+
+You are NOT allowed to:
+- Sell this software.
+- Claim you created this software.
+- Redistribute this software as your own.
+- Use this software to distribute illegal content, cracked software,
+  stolen accounts, or anything that violates Discord’s Terms of Service.
+
+You ARE allowed to:
+- Self-host the bot.
+- Modify the bot for your own server.
+- Add your own stock types and items.
+- Share your modified version ONLY if you credit the original creator (Bryleigh).
+
+This software is provided “as is” without warranty of any kind.
+Use at your own risk.
+
+# Credits
+Created by Bryleigh  
+Aceera Project 2026
