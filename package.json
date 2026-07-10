@@ -1,0 +1,13 @@
+{
+  "name": "aceera-gen-bot",
+  "version": "1.0.0",
+  "description": "Aceera Gen Bot created by Bryleigh — stock system, DM delivery, cooldown, owner commands.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.15.3"
+  }
+}
