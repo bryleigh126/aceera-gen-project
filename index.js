@@ -6,12 +6,100 @@ import {
 } from "discord.js";
 import fs from "fs";
 
-// 🔥 HARD‑CODED TOKEN
+// 🔥 TOKEN — ADD YOURS MANUALLY
+const TOKEN = "ADD YOUR TOKEN HERE";
+
+// ⚙️ CONFIG — YOUR IDS
+const GEN_CHANNEL_ID = "ADD YOUR CHANNEL ID HERE";
+const OWNER_ID = "ADD YOUR USER ID HERE"; // ONLY YOU CAN RESTOCK
+
+// 📦 Load stock file
+function loadStock() {
+    if (!fs.existsSync("./stock.json")) return {};
+    return JSON.parse(fs.readFileSync("./stock.json"));
+}
+
+function saveStock(data) {
+    fs.writeFileSync("./stock.json", JSON.stringify(data, null, 4));
+}
+
+// ⏳ Cooldown map — 10 minutes
+const cooldown = new Map();
+const COOLDOWN_MS = 10 * 60 * 1000; // 10 minutes
+
+const client = new Client({
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.MessageContent,
+        GatewayIntentBits.DirectMessages
+    ],
+    partials: [Partials.Channel]
+});
+
+client.once("ready", () => {
+    console.log(`🔥 Aceera Setup Gen online as ${client.user.tag}`);
+});
+
+client.on("messageCreate", async (msg) => {
+    if (msg.author.bot) return;
+    if (msg.channel.id !== GEN_CHANNEL_ID) return;
+
+    const args = msg.content.split(" ");
+
+    // ---------------------------------------------------
+    // 🔒 OWNER‑ONLY: ADD STOCK
+    // ---------------------------------------------------
+    if (args[0] === "!gen" && args[1] === "addstock") {
+
+        if (msg.author.id !== OWNER_ID) {
+            return msg.reply("❌ Only the **owner** can restock.");
+        }
+
+        const type = args[2];
+        if (!type) return msg.reply("❌ You must specify a **type**.");
+
+        const rawLinks = msg.content.split(type)[1].trim();
+        const links = rawLinks.split(",").map(l => l.trim()).filter(l => l.length > 0);
+
+        if (links.length === 0) {
+            return msg.reply("❌ No valid links found.");
+        }
+
+        let stock = loadStock();
+        if (!stock[type]) stock[typeAlright Bryleigh — here is the **full recode** exactly how you asked:
+
+- **Your GEN channel ID included**
+- **Your OWNER ID included**
+- **Your cooldown included**
+- **Your stock system included**
+- **Your help commands included**
+- **Your viewstock / removestock / clearstock included**
+- **Your generate command included**
+- **NO TOKEN included** (you will paste it manually)
+
+Everything is clean, stable, and ready to run.
+
+---
+
+# ⭐ **FULL ACEERA GEN BOT RECODE (with your IDs)**  
+Paste your token into `TOKEN = "YOUR_TOKEN_HERE"` after.
+
+```js
+import {
+    Client,
+    GatewayIntentBits,
+    Partials,
+    EmbedBuilder
+} from "discord.js";
+import fs from "fs";
+
+// 🔥 TOKEN — YOU WILL ADD THIS MANUALLY
 const TOKEN = "YOUR_TOKEN_HERE";
 
-// ⚙️ CONFIG — REPLACE THESE
-const GEN_CHANNEL_ID = "YOUR_GEN_CHANNEL_ID";
-const OWNER_ID = "YOUR_DISCORD_USER_ID"; // ONLY YOU CAN RESTOCK
+// ⚙️ CONFIG — YOUR IDS
+const GEN_CHANNEL_ID = "1524668185205276723";
+const OWNER_ID = "1409458507828166656"; // ONLY YOU CAN RESTOCK
 
 // 📦 Load stock file
 function loadStock() {
