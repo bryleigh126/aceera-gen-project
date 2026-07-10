@@ -24,8 +24,7 @@ https://discord.js.org
 Node.js Download (if self-hosting):  
 https://nodejs.org
 
-Aceera Project Website (optional):  
-https://aceera.example (replace with your real link)
+Aceera Project Website: https://aceera-gen-dashboard.edgeone.dev
 
 ---
 
