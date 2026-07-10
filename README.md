@@ -71,3 +71,21 @@ do !gen [type]
 to use the gen
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Note: This bot does not generate real-world codes. Server administrators must manually upload their own valid stock files to distribute rewards to their community.
+
+
