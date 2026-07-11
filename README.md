@@ -26,6 +26,7 @@ https://nodejs.org
 
 Aceera Project Website: https://aceera-gen-dashboard.edgeone.dev
 
+Aceera Project discord server:https://discord.gg/RznPCQVCx
 ---
 
 ## 🛠️ Installation Guide
@@ -47,13 +48,13 @@ README.md
 LICENSE
 
 ### 3. Insert Your Token
-Inside `index.js`:
+Inside `token.env`:
 
 const TOKEN = "YOUR_TOKEN_HERE";
 
 ### 4. Set Your IDs
 Replace:
-
+owner_id with your discord user id in index.cjs
 
 ### 5. Start the Bot
 Press **Start** on Waifly.
@@ -69,7 +70,7 @@ to add stock
 
 do !gen [type] 
 to use the gen
-
+use !gen help for help
 
 
 
