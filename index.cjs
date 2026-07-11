@@ -1,3 +1,5 @@
+require("dotenv").config({ path: "./token.env" });
+
 const {
     Client,
     GatewayIntentBits,
@@ -6,8 +8,8 @@ const {
 } = require("discord.js");
 const fs = require("fs");
 
-// 🔥 TOKEN — YOU WILL ADD THIS MANUALLY
-const TOKEN = "YOUR_TOKEN_HERE";
+// 🔥 TOKEN — NOW LOADED FROM token.env
+const TOKEN = process.env.TOKEN;
 
 // ⚙️ CONFIG — YOUR IDS
 const GEN_CHANNEL_ID = "GEN CHANNEL ID HERE";
